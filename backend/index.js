@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to Mock Storage')
 })
 
+app.use(express.json());
 app.use('/post',postRoute)
 
 

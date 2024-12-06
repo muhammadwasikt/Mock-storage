@@ -16,10 +16,9 @@ postRoute.get('/',(req , res)=>{
 })
 
 postRoute.post('/',(req , res)=>{
-    // const data = req.body
-console.log(req.body);
+    const data = req.body
 
-    // postData.push(data)
+    postData.push(data)
     try{
         res.status(201).send({status: 201 , message: 'Data added successfully', data: postData})
     }

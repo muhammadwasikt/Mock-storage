@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import axios from "axios"
 
@@ -16,17 +16,7 @@ const AddPostForm = () => {
         axios.post('https://mockstorageapi.vercel.app/post' , data)
         reset()
     }
-    const addPostData = async () => {
-        try {
-            const response = await axios.get('https://mockstorageapi.vercel.app/post')
-            console.log(response);
-        } catch (error) {
-            console.error(error)
-        }
-    }
-    useEffect(() => {
-        addPostData()
-    },[])
+
     return (
         <div className="w-full flex justify-center p-2">
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 max-w-[450px] w-full shadow-xl p-3">

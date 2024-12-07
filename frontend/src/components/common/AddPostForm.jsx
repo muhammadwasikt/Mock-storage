@@ -12,6 +12,10 @@ const AddPostForm = () => {
         formState: { errors },
     } = useForm()
 
+    const onSubmit = (data) => {
+        axios.post('https://mockstorageapi.vercel.app/post' , data)
+        reset()
+    }
     const addPostData = async () => {
         try {
             const response = await axios.get('https://mockstorageapi.vercel.app/post')
@@ -22,12 +26,7 @@ const AddPostForm = () => {
     }
     useEffect(() => {
         addPostData()
-    })
-    const onSubmit = (data) => {
-        setId(id + 1)
-        const postData = { ...data, id: id }
-        reset()
-    }
+    },[])
     return (
         <div className="w-full flex justify-center p-2">
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 max-w-[450px] w-full shadow-xl p-3">

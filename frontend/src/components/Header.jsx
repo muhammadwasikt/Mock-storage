@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <div className="navbar bg-base-100 shadow-md">
-            <div className="flex-1">
+            <div className="flex w-full items-center">
                 <h1 className='text-xl font-extrabold'>MOCKSTORAGE</h1>
             </div>
             <div className="flex-none gap-2">

@@ -18,8 +18,8 @@ const ApiHandler = () => {
     <div className="w-full flex flex-col items-center gap-3">
       <div className="max-w-[600px] w-full bg-gray-200 p-5 rounded-xl my-4">
         <p className="text-lg w-full break-words pb-3">fetch('https://mockstorageapi.vercel.app/post')</p>
-        <p className="text-center -ml-16">.then(res=&gt;res.json())</p>
-        <p className="text-center ">.then(json=&gt;console.log(json))</p>
+        <p className="text-center -ml-16 break-words">.then(res=&gt;res.json())</p>
+        <p className="text-center break-words">.then(json=&gt;console.log(json))</p>
       </div>
       <button onClick={addPostData} className="btn">
         Fetch data

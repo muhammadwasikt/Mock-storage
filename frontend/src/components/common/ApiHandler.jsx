@@ -26,8 +26,9 @@ const ApiHandler = () => {
       </button>
       <div className="max-w-[600px] w-full bg-gray-200 p-5 rounded-xl my-4 h-[300px] overflow-scroll">
         {data?.map((item , index)=>{
+            const data = {...item , id:index}
             return(
-                <p key={index}>{JSON.stringify(item)}</p>
+                <p key={index}>{JSON.stringify(data)}</p>
             )
         })}
       </div>
